@@ -3,7 +3,12 @@ const shortId = require('shortid');
 
 const urlSchema = new mongoose.Schema({
     originalUrl: String,
-    shortUrl: { type: String, unique: true, default: shortId.generate }
+    shortUrl: String,
+});
+
+urlSchema.pre('save', function(next) {
+    this.shortUrl = shortId.generate();
+    next();
 });
 
 module.exports = mongoose.model('Url', urlSchema);
