@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const validUrl = require('valid-url');
 const Url = require('./urlSchema'); // Adjust the path as necessary
 const app = express();
+const cors = require('cors');
 const port = process.env.PORT || 3000;
 
 // Connect to MongoDB
@@ -16,6 +17,8 @@ app.use(express.urlencoded({ extended: true }));
 
 // Serve static files from 'public' directory
 app.use(express.static('public'));
+app.use(cors());
+
 
 app.use('/public', express.static(`${process.cwd()}/public`));
 
