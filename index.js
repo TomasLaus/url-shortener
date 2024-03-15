@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const validUrl = require('valid-url');
-const Url = require('./urlSchema'); // Adjust the path as necessary
+const Url = require('./model/urlSchema');
 const app = express();
 const cors = require('cors');
 const port = process.env.PORT || 3000;
