@@ -3,7 +3,9 @@
 This project is a URL shortener microservice built with Express.js and Mongoose. It allows users to submit a URL and receive a shortened version of it. When users access the shortened URL, they will be redirected to the original URL.
 
 ### [Url Shortener Microservice - Live Demo](https://url-shortener-hzxp.onrender.com)
-*you may have to wait about 30-50 seconds if the page does not load (due to the hosting service).
+
+> [!NOTE]
+> if the page does not load, you may have to wait about 30-50 seconds (due to the hosting service).
 
 ## Features
 
